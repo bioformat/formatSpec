@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:soapenc="http://www.w3.org/2003/05/soap-encoding" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://visit.dhs.gov/ident/6 XSD/ident.xsd">
+	<env:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+		<wsa:MessageID>QVUEZMWUNK18</wsa:MessageID>
+		<wsa:To>http://ibusprodapp1.dhs-usv.gov/soap/services/ixm</wsa:To>
+		<wsa:From>
+			<wsa:Address>jms:ICE</wsa:Address>
+		</wsa:From>
+		<wsa:ReplyTo>
+			<wsa:Address>jms:ICE/ICE.OCIO.IDENT.IXM6.RESPONSE</wsa:Address>
+		</wsa:ReplyTo>
+		<wsa:Action>http://visit.dhs.gov/ident/ixm/ExternalIdentify</wsa:Action>
+	</env:Header>
+	<env:Body>
+		<ns9:ExternalIdentifyRequest xmlns:ns10="http://niem.gov/niem/domains/screening/2.1" xmlns:ns11="http://niem.gov/niem/domains/jxdm/4.1" xmlns:ns12="http://niem.gov/niem/biometrics/1.0" xmlns:ns13="http://niem.gov/niem/domains/internationalTrade/2.1" xmlns:ns14="http://biometrics.nist.gov/standard/2011" xmlns:ns15="http://niem.gov/niem/appinfo/2.0" xmlns:ns5="http://niem.gov/niem/structures/2.0" xmlns:ns6="http://niem.gov/niem/niem-core/2.0" xmlns:ns7="http://visit.dhs.gov/ident-internal/6" xmlns:ns8="http://niem.gov/niem/ansi-nist/2.0" xmlns:ns9="http://visit.dhs.gov/ident/6">
+			<ns9:ExternalIdentifyOptions>
+				<ns9:ResultSetOptions>
+					<ns9:EncounterFormatOptions>
+						<ns9:EncounterBiometricsRequestList>
+							<ns9:EncounterBiometricsRequestListItem>
+								<ns9:EncounterBiometricsRequestCode>Face</ns9:EncounterBiometricsRequestCode>
+							</ns9:EncounterBiometricsRequestListItem>
+						</ns9:EncounterBiometricsRequestList>
+						<ns9:ResultDetailLevelCode>Detail</ns9:ResultDetailLevelCode>
+						<ns9:ResultVersionCompatibilityCode>6007</ns9:ResultVersionCompatibilityCode>
+					</ns9:EncounterFormatOptions>
+					<ns9:EncounterFilterOptions>
+						<ns9:EncounterOrderingCode>Newest First</ns9:EncounterOrderingCode>
+						<ns9:MaximumResultCount>50</ns9:MaximumResultCount>
+					</ns9:EncounterFilterOptions>
+				</ns9:ResultSetOptions>
+				<ns10:BiometricSource>
+					<ns10:BiometricSourceCategoryText>IAFIS</ns10:BiometricSourceCategoryText>
+				</ns10:BiometricSource>
+				<ns8:RecordRetentionIndicator>false</ns8:RecordRetentionIndicator>
+				<ns9:TransactionCategoryCodeText>CAR</ns9:TransactionCategoryCodeText>
+			</ns9:ExternalIdentifyOptions>
+			<ns9:Activity>
+				<ns6:ActivityIdentification>
+					<ns6:IdentificationID>761325</ns6:IdentificationID>
+					<ns6:IdentificationCategoryDescriptionText>EnforceCivId</ns6:IdentificationCategoryDescriptionText>
+				</ns6:ActivityIdentification>
+				<ns6:ActivityCategoryText>Enforcement</ns6:ActivityCategoryText>
+				<ns6:ActivityReasonText>ICE EAGLE transaction</ns6:ActivityReasonText>
+				<ns6:ActivityDate>
+					<ns6:DateTime>2019-06-03T10:41:57.288</ns6:DateTime>
+				</ns6:ActivityDate>
+				<ns9:OriginatingOrganization>
+					<ns6:OrganizationName>DHS</ns6:OrganizationName>
+					<ns6:OrganizationUnitName>CBP</ns6:OrganizationUnitName>
+					<ns6:OrganizationSubUnitName>BP</ns6:OrganizationSubUnitName>
+				</ns9:OriginatingOrganization>
+				<ns9:ActivityReporter>
+					<ns10:ActivityUserLogonID>ENFENG06</ns10:ActivityUserLogonID>
+				</ns9:ActivityReporter>
+				<ns10:ActivitySiteID>JFK</ns10:ActivitySiteID>
+			</ns9:Activity>
+			<ns9:EncounterIdentificationQuery>
+				<ns6:EncounterIdentification>
+					<!--<ns6:IdentificationID>3518481888</ns6:IdentificationID>-->
+					<ns6:IdentificationID>4303638106</ns6:IdentificationID>
+					<ns6:IdentificationCategoryDescriptionText>EID</ns6:IdentificationCategoryDescriptionText>
+				</ns6:EncounterIdentification>
+			</ns9:EncounterIdentificationQuery>
+		</ns9:ExternalIdentifyRequest>
+	</env:Body>
+</env:Envelope>
